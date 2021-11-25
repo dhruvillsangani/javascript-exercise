@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+<script>
+
+let arr1 = [1,5,7,9,3];
+
+let arr2 = arr1.filter(larger);
+    
+function larger (a) {
+
+return a>5;
+
+}
+console.log(arr2);
+
+const obj1 = {
+   1:1,
+   2:5,
+   3:7,
+   4:9,
+   5:3
+};
+
+
+
+console.log(Object.keys(obj1));
+
+// arr3 = [ { x: 1 }, { x: 5 }, { x: 7 },{x: 9}, {x: 3} ];
+
+ let arr4 = Object.keys(obj1).reduce((a,b)=> {
+ return a*b;
+});
+
+console.log(arr4);  
+
+// console.log(arr4);
+
+
+// let arr3 = arr1.map(myfunction);
+
+// function myfunction (num) {
+
+// return num*num;
+
+// }
+// console.log(arr3);
+
+
+</script>
+
+
+
+</body>

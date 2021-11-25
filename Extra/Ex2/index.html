@@ -1,0 +1,39 @@
+
+    <HTML>
+        <head>
+        </head>
+        <body>
+          
+
+            <script>
+
+
+//      const rot13 = (message) => {
+
+//      const originalAlpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+//      const cipher = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
+//      return message.replace(/[a-z]/gi, letter => cipher[originalAlpha.indexOf(letter)])
+//   }
+
+//   console.log(rot13("abCC A"));
+
+
+let input = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+let output = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM ";
+let userInput = "abc ABC\" ";
+let encode ="";
+
+for (let i=0 ; i<=userInput.length-1;i++) {
+    
+    let index = input.indexOf(userInput[i]);
+    
+    encode = encode + output[index];
+    
+}
+console.log(encode);
+            </script>
+
+        </body>
+        
+       
+

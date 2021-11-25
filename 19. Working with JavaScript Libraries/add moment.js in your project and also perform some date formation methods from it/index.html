@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+<script src="moment.js" ></script>
+</head>
+<body>
+
+    <script>
+        let now = new Date();
+ 
+ var dateStringWithTime = moment(now).format('YYYY-MM-DD HH:MM:SS');
+ console.log(dateStringWithTime);
+ 
+ let basicFormat = moment();
+ console.log(basicFormat)  
+  
+ let basicFormatUTC = moment.utc().format();
+ console.log(basicFormatUTC)  
+  
+ let dayFormat = moment().format('dddd');
+ console.log(dayFormat);  
+  
+ let yearsAgo = moment("20111031", "YYYYMMDD").fromNow();
+ console.log(yearsAgo);  
+  
+ let currentLocalTime = moment().format('LTS');
+ console.log(currentLocalTime);  
+  
+//  let timeInLA = basicFormat.tz('America/Los_Angeles').format('ha z');
+//  console.log(timeInLA);  
+
+    </script>
+</body>

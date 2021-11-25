@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+
+    <link rel="stylesheet" href="style.css" />
+
+
+
+</head>
+
+
+    <body>
+        <div id="main-box">
+            <div id="child">
+          <h2>SIZES & POSITIONS</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ad ea
+            tempora, repellat illum, autem culpa quidem dolor nulla praesentium
+            animi optio adipisci dicta error sint mollitia cum quos modi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ad ea
+            tempora, repellat illum, autem culpa quidem dolor nulla praesentium
+            animi optio adipisci dicta error sint mollitia cum quos modi!
+          </p>
+          </div>
+
+        </div>
+
+        <button id="bt1"  onclick="scrollWin()">Click me to scroll Down!</button><br><br>
+        <button id="bt2"  onclick="scrollUp()">Click me to scroll Up!</button><br><br>
+
+
+        <script>
+
+            var parent = document.getElementById("main-box");
+            var child = document.getElementById("child").parentElement;
+
+            var c= child.offsetTop;
+            console.log(c);
+            console.log(parent.offsetTop);
+
+             function scrollUp() {
+
+                child.scrollTo(0,50);
+
+             }
+
+            function scrollWin() {
+                child.scrollBy(0,50);
+                               
+             }
+
+
+
+        </script>
+
+
+      </body>

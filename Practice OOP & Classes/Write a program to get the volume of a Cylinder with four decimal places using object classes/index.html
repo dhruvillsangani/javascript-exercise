@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+
+<title>Volume Of Cylinder</title>
+
+</head>
+
+
+<body>
+
+<script>
+
+class Cylinder {
+
+constructor (r,h) {
+    this.r = r;
+    this.h = h;
+
+}
+calculate() {
+
+
+let v = 3.1400*this.r*this.r*this.h;
+
+let v1 = v.toFixed(4);
+
+console.log(v1);
+}
+
+}
+let c = new Cylinder(3.2022,4.3333);
+
+c.calculate();
+
+
+
+</script>
+
+</body>

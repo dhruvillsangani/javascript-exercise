@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title>Load Module Lazilly......</title>
+</head>
+
+<body>
+    <img id="img1" class="img" data-img="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg">
+    <img id="img2" class="img" data-img="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_960_720.jpg">
+    <img id="img3" class="img" data-img="https://cdn.pixabay.com/photo/2014/02/27/16/10/tree-276014_960_720.jpg">
+
+
+    <script>
+        let options = {
+            root:null,
+            rootMargin:'0px',
+            threshold:0.25,
+        };
+
+        let callback = (entries,observer) => {
+
+            entries.forEach(entry => {
+
+                if(entries.isIntersecting && entry.target.className =='img') {
+                    let imageUrl = entry.target.getAttribute('data-img');
+                    if(imageUrl) {
+
+                        entry.target.src =imageUrl;
+                        observer.unobserver(entry.target);
+
+
+                    }
+
+                }
+            });
+        }
+
+
+        
+        let observer = new IntersectionObserver(callback,options);
+        observer.observe(document.querySelector('#img1'));
+        observer.observe(document.querySelector('#img2'));
+        observer.observe(document.querySelector('#img3'));
+
+    </script>
+</body>

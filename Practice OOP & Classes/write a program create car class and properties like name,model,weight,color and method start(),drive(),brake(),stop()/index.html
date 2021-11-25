@@ -1,0 +1,52 @@
+<script>
+
+class Car {
+
+constructor(name,model,weight,color){
+
+this.name = name;
+this.model = model
+this.weight = weight;
+this.color = color;
+
+
+}
+
+start(){
+
+console.log(this.name+ " has started succesfully ---");
+
+}
+drive(){
+
+console.log(this.model);
+
+}
+
+brake(){
+
+console.log(this.weight);
+
+}
+
+stop () {
+
+console.log(this.color);
+
+}
+
+}
+
+let obj1 = new Car("Audi","XYZ","100kg","Black");
+
+obj1.start();
+obj1.drive();
+obj1.brake();
+obj1.stop();
+
+
+
+
+
+
+</script>

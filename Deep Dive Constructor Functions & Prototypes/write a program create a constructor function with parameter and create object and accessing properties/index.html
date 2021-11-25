@@ -1,0 +1,22 @@
+<script>
+
+function Person (name,age,gender) {
+
+ this.name = name,
+ this.age = age,
+ this.gender = gender,
+
+ this.greet = function () {
+     return ('Hi' + ' ' + this.name);
+ }
+}
+
+
+const person1 = new Person('Dhruvil', 21, 'male');
+const person2 = new Person('Niket', 21, 'male');
+
+
+console.log(person1.name); 
+console.log(person2.name); 
+
+</script>
